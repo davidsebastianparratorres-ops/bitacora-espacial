@@ -1,0 +1,32 @@
+@layer reset, base, componentes;
+
+@layer reset {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+}
+
+@layer base {
+  body {
+    margin: 0;
+    min-height: 100dvh;
+    font-size: var(--texto-base);
+    line-height: 1.5;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 1.2rem + 2.5vw, 3rem);
+    margin-block-end: var(--espacio-3); 
+  }
+
+  p {
+    max-width: 65ch;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-acento);
+    outline-offset: 2px;
+  }
+}
